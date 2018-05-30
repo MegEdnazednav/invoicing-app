@@ -2,7 +2,5 @@ version: '3.4'
 services:
   invoicing:
     image:  megednazednav/invoicing:0.1.0
-    ports:
-      - 80:3000
   invoicing-sync:
     image: megednazednav/invoicing-sync:0.1.3
