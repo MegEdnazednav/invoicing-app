@@ -6,3 +6,5 @@ services:
      - ./data/invoicing:/usr/src/app/db/data
   invoicing-sync:
     image: megednazednav/invoicing-sync:0.1.4
+    volumes:
+      - ./data/invoicing-sync/credentials.json:/app/credentials.json
