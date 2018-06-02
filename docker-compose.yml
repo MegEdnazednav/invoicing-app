@@ -1,7 +1,7 @@
 version: '3.4'
 services:
   invoicing:
-    image:  megednazednav/invoicing:0.1.3
+    image: megednazednav/invoicing:0.1.4
     volumes:
      - ./data/invoicing:/usr/src/app/db/data
   invoicing-sync:
