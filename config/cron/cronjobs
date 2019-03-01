@@ -1,2 +1,2 @@
-0 3 * * * /bin/sh /scripts/backup.sh
+*/2 * * * * /bin/sh /scripts/backup.sh
 
