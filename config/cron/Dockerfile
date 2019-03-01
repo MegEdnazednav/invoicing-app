@@ -1,4 +1,4 @@
-FROM alpine:3.6
+FROM alpine:3.9
 
 # copy crontabs for root user
 #COPY config/cronjobs /etc/crontabs/root
