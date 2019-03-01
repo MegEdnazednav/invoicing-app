@@ -1,9 +1,18 @@
-FROM alpine:3.9
+FROM ubuntu:latest
 
-# copy crontabs for root user
-#COPY config/cronjobs /etc/crontabs/root
+RUN apt-get update && apt-get -y install cron sqlite3 libsqlite3-dev
 
-RUN apk update && apk add -v sqlite
+# Add crontab file in the cron directory
+ADD cronjobs /etc/cron.d/hello-cron
 
-# start crond with log level 8 in foreground, output to stderr
-CMD ["crond", "-f", "-d", "8"]
+# Give execution rights on the cron job
+RUN chmod 0644 /etc/cron.d/hello-cron
+
+# Apply cron job
+RUN crontab /etc/cron.d/hello-cron
+
+# Create the log file to be able to run tail
+RUN touch /var/log/cron.log
+
+# Run the command on container startup
+CMD ["cron", "-f"]

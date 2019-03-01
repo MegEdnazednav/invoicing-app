@@ -1,7 +1,7 @@
 version: '3.4'
 services:
   cronjobs:
-    image: megednazednav/cronjob-invoicing:0.0.1
+    image: megednazednav/cronjob-invoicing:0.0.3
     build: ./config/cron/
     volumes:
       - ./data:/data
