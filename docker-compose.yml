@@ -8,7 +8,7 @@ services:
       - ./config/cron/cronjobs:/etc/crontabs/root
       - ./config/cron/scripts:/scripts
   invoicing:
-    image: megednazednav/invoicing:0.3.0
+    image: megednazednav/invoicing:0.4.0
     volumes:
      - ./data/invoicing:/usr/src/app/db/data
   invoicing-sync:
