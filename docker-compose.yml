@@ -1,4 +1,7 @@
 version: '3.4'
+# Note for future self: images are NOT build on dockerhub.
+# The repo's are private and automated build is not configured.
+# no idea why
 services:
   cronjobs:
     image: megednazednav/cronjob-invoicing:0.0.4
