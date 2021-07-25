@@ -11,7 +11,7 @@ services:
       - ./config/cron/cronjobs:/etc/crontabs/root
       - ./config/cron/scripts:/scripts
   invoicing:
-    image: megednazednav/invoicing:0.5.3
+    image: megednazednav/invoicing:0.5.4
     volumes:
      - ./data/invoicing:/usr/src/app/db/data
   invoicing-sync:
